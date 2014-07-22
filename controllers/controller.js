@@ -1,12 +1,13 @@
-var portfolioApp = angular.module('portfolioApp', []);
+var ProjectListController = angular.module('ProjectListController', []);
 
-portfolioApp.controller('ProjectListController', function ($scope) {
+ProjectListController.controller('ProjectController', function ($scope) {
+  $scope.message = 'This is Add new order screen';
   $scope.projects = [
     {'name': 'Aviation Island Brewing',
-     'url': 'aviation-island.html',
+     'url': 'partials/aviation-island.html',
      'img': 'images/aib/logo-600.jpg',
      'category': [
-      'Web Design',
+      'Web Development',
       'Branding'
      ],
    },
@@ -15,7 +16,7 @@ portfolioApp.controller('ProjectListController', function ($scope) {
      'url': 'bwbs.html',
      'img': 'images/bw_logo_600.png',
      'category': [
-      'Web Design'
+      'Web Development'
      ],
    },
 
@@ -23,12 +24,12 @@ portfolioApp.controller('ProjectListController', function ($scope) {
      'url': 'ftc.html',
      'img': 'images/ftc.jpg',
      'category': [
-      'Web Design'
+      'Web Development'
      ],
    },
 
    {'name': 'Various Logos',
-     'url': 'logo.html',
+     'url': 'logos.html',
      'img': 'images/logos/java_love.jpg',
      'category': [
       'Branding'
@@ -39,8 +40,10 @@ portfolioApp.controller('ProjectListController', function ($scope) {
      'url': 'posters.html',
      'img': 'images/windsurfing_thumb.jpg',
      'category': [
-      'Branding'
+      'Branding',
+      'Print'
      ],
    },
-  ];
-});
+  ]
+})
+
