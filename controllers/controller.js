@@ -4,7 +4,7 @@ ProjectListController.controller('ProjectController', function ($scope) {
   $scope.message = 'This is Add new order screen';
   $scope.projects = [
     {'name': 'Aviation Island Brewing',
-     'url': 'partials/aviation-island.html',
+     'url': 'aib',
      'img': 'images/aib/logo-600.jpg',
      'category': [
       'Web Development',
@@ -13,7 +13,7 @@ ProjectListController.controller('ProjectController', function ($scope) {
    },
 
    {'name': 'Bike Works Beach & Sports',
-     'url': 'bwbs.html',
+     'url': 'bwbs',
      'img': 'images/bw_logo_600.png',
      'category': [
       'Web Development'
@@ -21,7 +21,7 @@ ProjectListController.controller('ProjectController', function ($scope) {
    },
 
    {'name': 'For The Cause',
-     'url': 'ftc.html',
+     'url': 'ftc',
      'img': 'images/ftc.jpg',
      'category': [
       'Web Development'
@@ -29,7 +29,7 @@ ProjectListController.controller('ProjectController', function ($scope) {
    },
 
    {'name': 'Various Logos',
-     'url': 'logos.html',
+     'url': 'logos',
      'img': 'images/logos/java_love.jpg',
      'category': [
       'Branding'
@@ -37,7 +37,7 @@ ProjectListController.controller('ProjectController', function ($scope) {
    },
 
    {'name': 'Posters',
-     'url': 'posters.html',
+     'url': 'posters',
      'img': 'images/windsurfing_thumb.jpg',
      'category': [
       'Branding',

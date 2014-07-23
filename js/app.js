@@ -1,8 +1,10 @@
 var portfolioApp = angular.module('portfolioApp', ['ui.router', 'ProjectListController']);
 
+
 portfolioApp.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('home')
+    $urlRouterProvider.otherwise('/home');
+
     $stateProvider
         .state('home', {
             url: '/home',
@@ -10,18 +12,18 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider) {
             controller: 'ProjectController'
         })
 
-        .state('aviation-island', {
-          url: '/aviation-island',
-          templateUrl: 'partials/aviation-island.html',
+        .state('aib', {
+          url: '/aib',
+          templateUrl: '../partials/aviation-island.html',
           controller: 'ProjectController'
         })
 
         .state('ftc', {
           url: '/ftc',
-          templateUrl: 'ftc.html'
+          templateUrl: '/partials/ftc.html'
         })
 
-        .state('bwbs', {
+        .state(' bwbs', {
           url: '/bwbs',
           templateUrl: 'bwbs.html'
         })
