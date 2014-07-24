@@ -7,35 +7,40 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state('home', {
-            url: '/home',
-            templateUrl: 'partials/home.html',
-            controller: 'ProjectController'
+            url         : '/home',
+            templateUrl : '../partials/home.html',
+            controller  : 'ProjectController'
         })
 
         .state('aib', {
-          url: '/aib',
-          templateUrl: '../partials/aviation-island.html',
-          controller: 'ProjectController'
+          url           : '/aib',
+          templateUrl   : '../partials/aib.html',
+          controller    : 'ProjectController'
         })
 
         .state('ftc', {
-          url: '/ftc',
-          templateUrl: '/partials/ftc.html'
+          url           : '/ftc',
+          templateUrl   : '../partials/ftc.html'
         })
 
-        .state(' bwbs', {
-          url: '/bwbs',
-          templateUrl: 'bwbs.html'
+        .state('bwbs', {
+          url           : '/bwbs',
+          templateUrl   : '../partials/bwbs.html'
         })
 
         .state('logos', {
-          url: '/logos',
-          templateUrl: 'logos.html'
+          url           : '/logos',
+          templateUrl   : '../partials/logos.html'
         })
 
         .state('posters', {
-          url: '/posters',
-          templateUrl: 'posters.html'
+          url           : '/posters',
+          templateUrl   : '../partials/posters.html'
+        })
+
+        .state('card', {
+          url           :'/card',
+          templateUrl   : '../partials/card.html'
         })
 
 })
