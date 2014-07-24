@@ -1,4 +1,8 @@
-var portfolioApp = angular.module('portfolioApp', ['ui.router', 'ProjectListController']);
+var portfolioApp = angular.module('portfolioApp', [
+  'ui.router',
+  'ProjectListController',
+  'SmoothScroll'
+  ]);
 
 
 portfolioApp.config(function($stateProvider, $urlRouterProvider) {
