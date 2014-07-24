@@ -3,6 +3,13 @@ body {
   line-height: 1.6875;
     font-family: 'Ropa Sans', Georgia, sans-serif, font-size:14px; font-style:normal; font-variant:normal; font-weight:normal; line-height:21px; height: 100%;
 }
+
+html,body{
+    height:100%;
+    max-width: 100%;
+    /*overflow-x:visable;*/
+}
+
 h1 h2 h3 h4 h5 h6 {
     font-family: 'Ropa Sans', Georgia, sans-serif;
 }
@@ -10,10 +17,37 @@ hr {
 border-top: 1px dotted #2E3433;
 width: 100%;
 }
+
+.pad-section{
+    padding: 50px,0;
+}
+.pad-intro{
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+
+.pad-section img{
+    width: 100%;
+}
+
+.text-vcenter{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
 #intro {
-  padding: 100px 0;
-  background-color: #1b676b;
-  color:#FFF;
+
+    color:#FFF;
+    background: url(../images/tea.jpg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #about {

@@ -1,20 +1,50 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var portfolioApp = angular.module('portfolioApp', [
+  'ui.router',
+  'ProjectListController',
+  'SmoothScroll'
+  ]);
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
+
+portfolioApp.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
-
-        // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
-            url: '/home',
-            templateUrl: 'partial-home.html'
+            url         : '/home',
+            templateUrl : '../partials/home.html',
+            controller  : 'ProjectController'
         })
 
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('about', {
-            // we'll get to this in a bit
-        });
+        .state('aib', {
+          url           : '/aib',
+          templateUrl   : '../partials/aib.html',
+          controller    : 'ProjectController'
+        })
 
-});
+        .state('ftc', {
+          url           : '/ftc',
+          templateUrl   : '../partials/ftc.html'
+        })
+
+        .state('bwbs', {
+          url           : '/bwbs',
+          templateUrl   : '../partials/bwbs.html'
+        })
+
+        .state('logos', {
+          url           : '/logos',
+          templateUrl   : '../partials/logos.html'
+        })
+
+        .state('posters', {
+          url           : '/posters',
+          templateUrl   : '../partials/posters.html'
+        })
+
+        .state('card', {
+          url           :'/card',
+          templateUrl   : '../partials/card.html'
+        })
+
+})

@@ -1,0 +1,17 @@
+9f92ad purple
+8e1031 maroon
+00a69c lt blue
+76d03b lt green
+BAB940 tan
+FB659B pink
+CB5355 rose
+
+2c2234	lt purple
+1e112b	Purple
+d83e40  orange
+8BC53F  lt green
+8BC53F  green
+3B7D1A dark green
+1B676B	blue
+144D50  drk blue
+3B7D1A

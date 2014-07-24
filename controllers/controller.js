@@ -1,46 +1,57 @@
-var portfolioApp = angular.module('portfolioApp', []);
+var ProjectListController = angular.module('ProjectListController', []);
 
-portfolioApp.controller('ProjectListController', function ($scope) {
+ProjectListController.controller('ProjectController', function ($scope) {
+  $scope.message = 'This is Add new order screen';
   $scope.projects = [
-    {'name': 'Aviation Island Brewing',
-     'url': 'aviation-island.html',
-     'img': 'images/aib/logo-600.jpg',
-     'category': [
-      'Web Design',
+    {'name'     : 'Aviation Island Brewing',
+     'url'      : 'aib',
+     'img'      : 'images/aib/logo-600.jpg',
+     'category' : [
+      'Web Development',
       'Branding'
      ],
    },
 
-   {'name': 'Bike Works Beach & Sports',
-     'url': 'bwbs.html',
-     'img': 'images/bw_logo_600.png',
-     'category': [
-      'Web Design'
+   {'name'      : 'For The Cause',
+     'url'      : 'ftc',
+     'img'      : 'images/cause.png',
+     'category' : [
+      'Web Development'
      ],
    },
 
-   {'name': 'For The Cause',
-     'url': 'ftc.html',
-     'img': 'images/ftc.jpg',
-     'category': [
-      'Web Design'
+   {'name'      : 'Bike Works Beach & Sports',
+     'url'      : 'bwbs',
+     'img'      : 'images/logos/bw_logo_600.png',
+     'category' : [
+      'Web Development'
      ],
    },
 
-   {'name': 'Various Logos',
-     'url': 'logo.html',
-     'img': 'images/logos/java_love.jpg',
+   {'name'      : 'Business Card',
+     'url'      : 'card',
+     'img'      : 'images/gp_white.png',
      'category': [
       'Branding'
      ],
    },
 
-   {'name': 'Posters',
-     'url': 'posters.html',
-     'img': 'images/windsurfing_thumb.jpg',
+   {'name'      : 'Posters',
+     'url'      : 'posters',
+     'img'      : 'images/windsurfing_thumb.jpg',
+     'category' : [
+      'Branding',
+      'Print'
+     ],
+   },
+
+   {'name'      : 'Various Logos',
+     'url'      : 'logos',
+     'img'      : 'images/jl.png',
      'category': [
       'Branding'
      ],
-   },
-  ];
-});
+   }
+  ]
+})
+
