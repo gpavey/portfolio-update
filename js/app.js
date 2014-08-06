@@ -1,7 +1,8 @@
 var portfolioApp = angular.module('portfolioApp', [
   'ui.router',
   'ProjectListController',
-  'SmoothScroll'
+  'SmoothScroll',
+  'angular-google-analytics'
   ]);
 
 
