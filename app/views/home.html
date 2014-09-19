@@ -18,29 +18,38 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <h1>My Work</h1>
+            <h1>PORTFOLIO</h1>
             <h2 class="subTitle">Latest fun projects I've been working on:</h2>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1 text-center">
+          <div class="col-sm-12 text-center">
             <div ng-repeat="project in projects">
 
               <div class="col-xs-12 col-sm-6 col-md-4 col_adj">
                 <div class="thumbnail">
                   <div class="work-thumb">
-                    <div class="work-image"> <a ui-sref="{{project.url}}"> <img src="{{project.img}}" alt='' width='600' height='600' /></a>
+
+                    <div class="work-image">
+                      <a ui-sref="{{project.url}}">
+                        <img src="{{project.img}}" alt='' width='599' height='600' />
+                      </a>
                     </div><!--work-image-->
-                    <div class="work-heading">
-                      <h2 class="thumb-heading"><a ui-sref="{{project.url}}">{{project.name}}
-                        <li ng-repeat="type in project.category">
-                          {{type}}
+
+                    <div class="work-description">
+                      <div class="work-description-content">
+                        <h2 class="thumb-heading">
+                          <a ui-sref="{{project.url}}">{{project.name}}</a>
+                        </h2>
+                        <li ng-repeat="type in project.category">{{type}}
                         </li>
-                        </a></h2>
-                      </div><!--work-heading-->
-                    </div><!--work-thumb-->
+                      </div>
+                    </div>
+
+                  </div><!--work-thumb-->
                 </div><!--thumbnail-->
+
               </div>
 
             </div>

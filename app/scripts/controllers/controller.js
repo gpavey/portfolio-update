@@ -6,24 +6,48 @@ ProjectListController.controller('ProjectController', function ($scope) {
   $scope.projects = [
     {'name'     : 'Aviation Island Brewing',
      'url'      : 'aib',
-     'img'      : 'images/aib/logo-600.jpg',
+     'img'      : 'images/aib.jpg',
      'category' : [
       'Web Development',
       'Branding'
      ],
    },
 
-   {'name'      : 'For The Cause',
-     'url'      : 'ftc',
-     'img'      : 'images/cause.png',
+   {'name'      : 'Bike Works Beach & Sports',
+     'url'      : 'bwbs',
+     'img'      : 'images/bwbs.jpg',
      'category' : [
       'Web Development'
      ],
    },
 
-   {'name'      : 'Bike Works Beach & Sports',
-     'url'      : 'bwbs',
-     'img'      : 'images/logos/bw_logo_600.png',
+   {'name'      : 'Travel Mockup',
+     'url'      : 'travel',
+     'img'      : 'images/travel.jpg',
+     'category' : [
+      'Web Development'
+     ],
+   },
+
+   {'name'      : 'SF Film Nerd',
+     'url'      : 'nerd',
+     'img'      : 'images/film.jpg',
+     'category' : [
+      'Web Development'
+     ],
+   },
+
+   {'name'      : 'Portfolio',
+     'url'      : 'portfolio',
+     'img'      : 'images/portfolio.jpg',
+     'category' : [
+      'Web Development'
+     ],
+   },
+
+   {'name'      : 'For The Cause',
+     'url'      : 'ftc',
+     'img'      : 'images/cause.jpg',
      'category' : [
       'Web Development'
      ],
@@ -37,6 +61,14 @@ ProjectListController.controller('ProjectController', function ($scope) {
      ],
    },
 
+   {'name'      : 'Various Logos',
+     'url'      : 'logos',
+     'img'      : 'images/jl.png',
+     'category': [
+      'Branding'
+     ],
+   },
+
    {'name'      : 'Posters',
      'url'      : 'posters',
      'img'      : 'images/windsurfing_thumb.jpg',
@@ -45,14 +77,6 @@ ProjectListController.controller('ProjectController', function ($scope) {
       'Print'
      ],
    },
-
-   {'name'      : 'Various Logos',
-     'url'      : 'logos',
-     'img'      : 'images/jl.png',
-     'category': [
-      'Branding'
-     ],
-   }
   ];
 });
 

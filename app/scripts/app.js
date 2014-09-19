@@ -30,6 +30,21 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider) {
           templateUrl   : '../views/ftc.html'
         })
 
+        .state('nerd', {
+          url           : '/nerd',
+          templateUrl   : '../views/nerd.html'
+        })
+
+        .state('travel', {
+          url           : '/travel',
+          templateUrl   : '../views/travel.html'
+        })
+
+        .state('portfolio', {
+          url           : '/portfolio',
+          templateUrl   : '../views/portfolio.html'
+        })
+
         .state('bwbs', {
           url           : '/bwbs',
           templateUrl   : '../views/bwbs.html'
