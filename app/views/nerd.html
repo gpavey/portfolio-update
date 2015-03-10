@@ -1,4 +1,22 @@
-<!-- Section 1 -->
+<header>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" ng-href="http://www.geoffpavey.com" ><img src="images/gp_small.png" height="20px"></a>
+        <p class="navbar-text">Geoff Pavey - <small>Web Developer</small></p>
+      </div>
+      <div id="navigation" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ng-href="#/home"><i class="fa fa-home fa-fw"></i>HOME</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+</header>
 <section class="work_background">
   <div class="container">
     <div class="row">
@@ -7,7 +25,7 @@
         <h4>WEBSITE</h4>
         <hr>
       </div>
-      <div class="col-xs-12 col-md-6 text-left"><p>Im a bit of a film buff and wanted to know what movies were filmed in San Francisco.  I found the data I needed on the SFGov data site and built a Rails app to take the data and present it on Google maps.  A fun side project.</p><br><a href="http://filmnerd.herokuapp.com" target="_blank" class="btn btn-sm btn-primary">VISIT WEBSITE</a>
+      <div class="col-xs-12 col-md-6 text-left"><p>I'm a bit of a film buff and wanted to know what movies were filmed in San Francisco.  I found the data I needed on the SFGov data site and built a Rails app to take the data and present it on Google maps.  A fun side project.</p><br><a href="http://filmnerd.herokuapp.com" target="_blank" class="btn btn-sm btn-primary">VISIT WEBSITE</a>
       </div>
     </div>
   </div>
@@ -31,12 +49,13 @@
     <div class="row">
       <div class="col-sm-6 text-left">
         <h5><strong>THE PROBLEM</strong></h5>
-        <p><small>The data was not very clean to start out with.  It had all the locations by name but not by geolocation so I had no easy way to map the data points.  I also had to deal with the fact that multiple film were set at the same location.  </small></p>
+        <p><small>The data was not very clean to start out with.  It had all the locations by name but not by geolocation so I had no easy way to map the data points.  I also had to deal with the fact that multiple films were set at the same location.  </small></p>
       </div>
       <div class="col-sm-6 text left">
         <h5><strong>THE SOLUTION</strong></h5>
-        <p><small>I found a tool from openrefine.org that would allow me to take the data, parse it up, send the named locations to google and get the geolocation codes back in a flat file. I was then able to take the new data and put it in a sql database.  Fun stuff.</small></p>
+        <p><small>I found a tool from openrefine.org that would allow me to take the data, parse it up, send the named locations to Google and get the geolocation codes back in a flat file. I was then able to take the new data and put it in a sql database.  Fun stuff.</small></p>
       </div>
+      <div class="col-xs-12 text-center pt20 "><a ng-href="#/home" class="btn btn-sm btn-primary">Back</a></div>
     </div>
   </div>
 </section>
