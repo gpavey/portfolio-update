@@ -15,7 +15,7 @@ SmoothScroll.service('anchorSmoothScroll', function(){
             scrollTo(0, stopY); return;
         }
         var speed = Math.round(distance / 100);
-        if (speed >= 20) speed = 20;
+        if (speed >= 40) speed = 40;
         var step = Math.round(distance / 25);
         var leapY = stopY > startY ? startY + step : startY - step;
         var timer = 0;

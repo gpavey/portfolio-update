@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
   <head>
     <meta charset="utf-8">
@@ -12,7 +12,8 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link href='http://fonts.googleapis.com/css?family=Ropa+Sans&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800,600,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
   </head>
@@ -23,79 +24,51 @@
 
     <!-- Add your site or application content here -->
     <div id="scrollArea" ng-controller="ScrollCtrl">
-    <header>
-      <!-- Fixed navbar -->
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand" ng-href="http://www.geoffpavey.com" ><img src="images/gp_small.png" height="20px"></a>
-            <p class="navbar-text">Geoff Pavey - <small>Web Developer</small></p>
-          </div>
-          <div id="navigation" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a ng-href="http://www.geoffpavey.com"><i class="fa fa-home fa-fw"></i>HOME</a></li>
-              <li><a ng-click="gotoElement('work')">PORTFOLIO</a></li>
-              <li><a ng-click="gotoElement('about')">ABOUT GEOFF</a></li>
-              <li><a ng-click="gotoElement('bottom')">WANT TO MEET?</a></li>
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
-        </div>
-      </div>
-
-    </header>
-
-
-      <div ui-view></div>
-
+      <div ui-view ng-class="well"></div>
 
     <footer id="footer">
-
-    <section class="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-4 text-left"> <i class="fa fa-caret-square-o-right "></i> Fishy Feet
-            <hr>
-            <div id="fishy" >
-              <iframe  height="250" src="http://www.youtube.com/embed/lwI8Lc7rjNY" frameborder="0" allowfullscreen></iframe>
+      <section class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 text-left"> <i class="fa fa-caret-square-o-right "></i> Fishy Feet
+              <hr>
+              <div id="fishy" >
+                <iframe  height="250" src="http://www.youtube.com/embed/lwI8Lc7rjNY" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
-          </div>
-          <!--end col-->
-          <div class="col-xs-12 col-sm-4 text-left"> <i class="fa fa-twitter"></i> Random Tweet
-            <hr>
-            <div><a class="twitter-timeline" href="https://twitter.com/GeoffPavey" data-widget-id="410891384594264064">Tweets by @GeoffPavey</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
-          </div>
-          <!--end col-->
-          <div class="col-xs-12 col-sm-4 text-left" > <i class="fa fa-envelope-o"></i> Want to meet?
-            <hr>
-            <div class="contact-data"> <a href="http://geoffpavey.com" >Geoff Pavey</a><br />
-              808-896-9492<br />
-              <a href="mailto:geoffpavey@gmail.com">geoffpavey@gmail.com</a></div>
-            <br />
-            <br />
-            <div id="social">
-              <ul>
-                <li><a href="http://twitter.com/#!/geoffpavey" target="_blank" alt="@geoffpavey" title="@geoffpavey"><img src="images/twitter_white.png"></a></li>
-          <li><a href="http://linkedin.com/in/geoffpavey" target="_blank" alt="" title="linkedin"><img src="images/linkedin_white.png"></a></li>
-                <li><a href="http://behance.com/geoffpavey" target="_blank" alt="geoffpavey" title="behance"><img src="images/behance_white.png"></a></li>
-              </ul>
+            <!--end col-->
+            <div class="col-xs-12 col-sm-4 text-left"> <i class="fa fa-twitter"></i> Random Tweet
+              <hr>
+              <div><a class="twitter-timeline" href="https://twitter.com/GeoffPavey" data-widget-id="410891384594264064">Tweets by @GeoffPavey</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+              </div>
+              <!--end col-->
+              <div class="col-xs-12 col-sm-4 text-left" > <i class="fa fa-envelope-o"></i> Want to meet?
+                <hr>
+                <div class="contact-data">Contact info:<br/>
+                  <a href="mailto:geoffpavey@gmail.com">geoff.pavey at gmail.com</a></div>
+                  <br />
+                  <br />
+                  <div id="social">
+                    <ul>
+                      <li><a href="http://linkedin.com/in/geoffpavey" target="_blank" alt="" title="linkedin"><img src="images/linkedin_white.png"></a></li>
+                      <li><a href="http://twitter.com/#!/geoffpavey" target="_blank" alt="@geoffpavey" title="@geoffpavey"><img src="images/twitter_white.png"></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--end col-->
+              </div>
             </div>
-          </div>
-          <!--end col-->
-        </div>
-      </div>
-      <hr>
-    </section>
+            <hr>
+          </section>
 
 
       <div id="copyright" class="row">
         <div id="col-xs-12 text-center">
           <ul>
-            <li>Web Development + Web Design </li>
+            <li>Web Development + Web Design  </li>
             <li> <img src="images/gp_small.png" width="25" height="30"> </li>
-            <li>&copy; 2014 Geoff Pavey</li>
+            <li> &copy; 2015 Geoff Pavey</li>
           </ul>
         </div>
       </div>
@@ -151,6 +124,7 @@
     <script src="bower_components/angulartics/src/angulartics-splunk.js"></script>
     <script src="bower_components/angulartics/src/angulartics-woopra.js"></script>
     <script src="bower_components/angulartics/src/angulartics-marketo.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-intercom.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
