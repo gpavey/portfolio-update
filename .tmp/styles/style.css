@@ -89,7 +89,7 @@ hr {
     background-color: #144D50;
     font-family: inherit;
 }
-.contact-data { padding: 10px 30px }
+/*.contact-data { padding: 10px 30px }*/
 .contact a { color: #fff }
 .contact a:hover { color: #000 }
 
@@ -269,12 +269,28 @@ img.attachment-featured-image,
 /** Footer
  * ==================================================
  */
+
 footer {
     padding: 25px 0;
     color: #fff;
     background-color: #144D50;
     font-family: inherit;
 }
+.video-container {
+    position: relative;
+    padding-bottom: 75%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.twitter-timeline { width: 100%; }
 #copyright ul {
     padding: 10px 0;
     text-transform: uppercase;
@@ -289,7 +305,15 @@ footer {
 }
 /* social
 ==================================================  */
+#social ul {
+  padding-left: 0px;
+}
 #social li {
     list-style: none;
     display: inline;
+}
+@media screen and (max-width: 601px){
+  .lh3 {
+    line-height: 5em !important;
+  }
 }
