@@ -70,7 +70,8 @@ ProjectListController.controller('ProjectController', function ($rootScope,$scop
       'img'       : 'images/bwbs.jpg',
       'category'     : [
       'Web',
-      'HTML5'
+      'HTML5',
+      'Ang'
       ],
     },
 
@@ -79,7 +80,7 @@ ProjectListController.controller('ProjectController', function ($rootScope,$scop
       'img'      : 'images/film.jpg',
       'category'    : [
       'Web',
-      'Ang'
+      'Ruby'
       ],
     },
 
