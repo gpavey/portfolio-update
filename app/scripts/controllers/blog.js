@@ -2,12 +2,12 @@
 var BlogListController = angular.module('BlogListController', []);
 
 BlogListController.controller('BlogController', function($anchorScroll, $stateParams, $state, BlogService, MetadataService) {
-    var vm = this;
+    var blogObj = this;
     var apiCallFunction;
 
-    vm.posts = [];
-    vm.loaded = false;
-    vm.subtitle = '';
+    blogObj.posts = [];
+    blogObj.loaded = false;
+    blogObj.subtitle = '';
 
     MetadataService.setMetadata({
         title: 'Blog',
@@ -16,25 +16,25 @@ BlogListController.controller('BlogController', function($anchorScroll, $statePa
 
     if (typeof $stateParams.tag !== 'undefined') {
         apiCallFunction = BlogService.allPostsByTag($stateParams.tag);
-        vm.subtitle = 'tagged with "' + $stateParams.tag + '"';
+        blogObj.subtitle = 'tagged with "' + $stateParams.tag + '"';
     } else if (typeof $stateParams.searchTerm !== 'undefined') {
         apiCallFunction = BlogService.allPostsBySearchTerm($stateParams.searchTerm);
-        vm.subtitle = 'searching "' + $stateParams.searchTerm + '"';
+        blogObj.subtitle = 'searching "' + $stateParams.searchTerm + '"';
     } else {
         apiCallFunction = BlogService.allPosts();
     }
 
     apiCallFunction.then(function(posts) {
-        vm.posts = posts;
-        vm.loaded = true;
+        blogObj.posts = posts;
+        blogObj.loaded = true;
     });
 
-    vm.scrollToTop = function() {
+    blogObj.scrollToTop = function() {
         $anchorScroll();
     };
 
-    vm.search = function(term) {
+    blogObj.search = function(term) {
         $state.go('postsBySearch', { searchTerm: term });
     };
-}
+});
 

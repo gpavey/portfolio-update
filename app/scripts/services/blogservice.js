@@ -7,7 +7,9 @@
  * @returns {{allPosts: allPosts, allPostsByTag: allPostsByTag, allPostsBySearchTerm: allPostsBySearchTerm, featuredPosts: featuredPosts, post: post}}
  * @constructor
  */
-function BlogService($http, $sce, config) {
+ var BlogService = angular.module('BlogService',[]);
+
+ BlogService.factory('BlogService', function ($http, $sce) {
 
     function allPosts() {
         return getData('posts?filter[category_name]=post');
@@ -31,8 +33,9 @@ function BlogService($http, $sce, config) {
 
     function getData(url) {
         return $http
-            .get(config.API_URL + url, { cache: true })
+            .get('http://geoffpavey.com/wp/wp-json/' + url, { cache: true })
             .then(function(response) {
+                console.log(response.data);
                 if (response.data instanceof Array) {
                     var items = response.data.map(function(item) {
                         return decorateResult(item);
@@ -63,8 +66,4 @@ function BlogService($http, $sce, config) {
         featuredPosts: featuredPosts,
         post: post
     };
-}
-
-angular
-    .module('app')
-    .factory('BlogService', BlogService);
+});

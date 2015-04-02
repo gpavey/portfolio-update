@@ -4,6 +4,8 @@ var portfolioApp = angular.module('portfolioApp', [
   'ProjectListController',
   'BlogListController',
   'PostListController',
+  'BlogService',
+  'MetadataService',
   'angulartics',
   'angulartics.google.analytics',
   'SmoothScroll',
@@ -11,7 +13,7 @@ var portfolioApp = angular.module('portfolioApp', [
   ]);
 
 
-portfolioApp.config(function($stateProvider, $urlRouterProvider) {
+portfolioApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
@@ -100,38 +102,38 @@ portfolioApp.config(function($stateProvider, $urlRouterProvider) {
             url         : "/blog",
             templateUrl : 'views/blog.html',
             controller  : 'BlogController',
-            controllerAs: 'vm'
+            controllerAs: 'blogObj'
         })
         .state('post', {
             url         : '/blog/:id/:title',
             templateUrl : 'views/post.html',
             controller  : 'PostController',
-            controllerAs: 'vm'
+            controllerAs: 'blogObj'
         })
 
-    $locationProvider.html5Mode(true).hashPrefix('!');
+    // $locationProvider.html5Mode(true).hashPrefix('!');
 
-    $urlRouterProvider.rule(function ($injector, $location) {
-        var slashHashRegex,
-            matches,
-            path = $location.url();
+    // $urlRouterProvider.rule(function ($injector, $location) {
+    //     var slashHashRegex,
+    //         matches,
+    //         path = $location.url();
 
-        // check to see if the path already has a slash where it should be
-        if (path[path.length - 1] === '/' || path.indexOf('/?') > -1) {
-            return path.substring(0, path.length - 1);
-        }
+    //     // check to see if the path already has a slash where it should be
+    //     if (path[path.length - 1] === '/' || path.indexOf('/?') > -1) {
+    //         return path.substring(0, path.length - 1);
+    //     }
 
-        // if there is a trailing slash *and* there is a hash, remove the last slash so the route will correctly fire
-        slashHashRegex = /\/(#[^\/]*)$/;
-        matches = path.match(slashHashRegex);
-        if (1 < matches.length) {
-            return path.replace(matches[0], matches[1]);
-        }
-    });
+    //     // if there is a trailing slash *and* there is a hash, remove the last slash so the route will correctly fire
+    //     slashHashRegex = /\/(#[^\/]*)$/;
+    //     matches = path.match(slashHashRegex);
+    //     if (1 < matches.length) {
+    //         return path.replace(matches[0], matches[1]);
+    //     }
+    // });
 });
 
-var config = {
+portfolioApp.routeConfig = {
     // global constant config values live here
     ROOT_URL: '%%ROOT_URL%%',
-    API_URL: '%%API_URL%%'
+    API_URL: 'http://geoffpavey.com'
 };

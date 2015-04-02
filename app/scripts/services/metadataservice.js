@@ -1,4 +1,6 @@
-function MetadataService() {
+var MetadataService = angular.module('MetadataService',[]);
+
+MetadataService.service('MetadataService',function() {
 
     var title,
         description,
@@ -16,9 +18,6 @@ function MetadataService() {
             description: description
         };
     };
-}
+});
 
 
-angular
-    .module('app')
-    .service('MetadataService', MetadataService);.js
