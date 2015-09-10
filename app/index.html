@@ -1,142 +1,309 @@
 <!DOCTYPE HTML>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Geoff Pavey Portfolio</title>
-    <meta name="description" content="Portfolio site of Geoff Pavey made with Angularjs">
-    <meta name="viewport" content="width=device-width">
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+<head>
+  <meta charset="utf-8">
+  <title>Geoff Pavey Portfolio</title>
+  <meta name="description" content="Portfolio site of Geoff Pavey">
+  <meta name="viewport" content="width=device-width">
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+ <!--  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" /> -->
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800,600,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/style.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="portfolioApp">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800,600,300' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/component.css" />
+
+</head>
+<body >
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div id="scrollArea" ng-controller="ScrollCtrl">
-      <div ui-view ng-class="well"></div>
-
-    <footer id="footer">
-      <section class="contact">
+    <header>
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-4 text-center"> <i class="fa fa-caret-square-o-right "></i> Fishy Feet
-              <hr>
-              <div class="video-container" >
-                <iframe  height="250" src="http://www.youtube.com/embed/lwI8Lc7rjNY" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-            <!--end col-->
-            <div class="col-xs-12 col-sm-4 text-center"> <i class="fa fa-twitter"></i> Random Tweet
-              <hr>
-              <div><a class="twitter-timeline" href="https://twitter.com/GeoffPavey" data-widget-id="410891384594264064">Tweets by @GeoffPavey</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
-              </div>
-              <!--end col-->
-              <div class="col-xs-12 col-sm-4 text-center" > <i class="fa fa-envelope-o"></i> Want to meet?
-                <hr>
-                <div class="contact-data">Contact info:<br/>
-                  <a href="mailto:geoff.pavey@gmail.com">geoff.pavey at gmail.com</a></div>
-                  <br />
-                  <br />
-                  <div id="social">
-                    <ul>
-                      <li><a href="http://linkedin.com/in/geoffpavey" target="_blank" alt="" title="linkedin"><img src="images/linkedin_white.png"></a></li>
-                      <li><a href="http://twitter.com/#!/geoffpavey" target="_blank" alt="@geoffpavey" title="@geoffpavey"><img src="images/twitter_white.png"></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <!--end col-->
-              </div>
-            </div>
-            <hr>
-          </section>
-
-
-      <div id="copyright" class="row">
-        <div id="col-xs-12 text-center">
-          <ul>
-            <li>Web Development + Web Design  </li>
-            <li> <img src="images/gp_small.png" width="25" height="30"> </li>
-            <li> &copy; 2015 Geoff Pavey</li>
-          </ul>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" ng-href="http://www.geoffpavey.com" ><img src="images/gp_small.png" height="20px"></a>
+            <p class="navbar-text">Geoff Pavey - <small>Web Designer/Developer</small></p>
+          </div>
+          <div id="navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#intro"><i class="fa fa-home fa-fw"></i>HOME</a></li>
+              <li><a href="#portfolio">WORK</a></li>
+              <li><a href="#process">PROCESS</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#footer">SAY HELLO</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
         </div>
       </div>
 
-    </footer>
-    <div id="bottom"></div>
-  </div>
+    </header>
+    <section id="intro" class="pad-intro">
+      <div class="container shadow1 ">
+        <div class="row">
+          <div class="col-xs-12 left"> <img src="images/gp.png">
+          </div>
+          <div class="col-xs-12 lh3">
+            <span class="italic">The Portfolio of</span><br>
+            <span class="name">Geoff Pavey</span>
+          </div>
+          <div class="col-xs-12 left shadow1 px20">
+            <span class="h1">Developer, Designer,</span><br>
+            <span class="h2">Traveler, Idealist,</span><br>
+            <span class="h3">Good Egg</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section id="portfolio" class="demo-2">
+      <div class="text-center">
+        <h1>PORTFOLIO</h1>
+        <h2 class="subTitle">Latest fun projects I've been working on:</h2>
+      </div>
+
+      <div id="grid" class="grid clearfix">
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/2.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Crystalline</h2>
+              <p>Soko radicchio bunya nuts gram dulse.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/4.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Cacophony</h2>
+              <p>Two greens tigernut soybean radish artichoke.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/6.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Languid</h2>
+              <p>Beetroot water spinach okra water chestnut.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/8.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Serene</h2>
+              <p>Water spinach arugula pea tatsoi.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/1.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Nebulous</h2>
+              <p>Pea horseradish azuki bean lettuce.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/3.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Iridescent</h2>
+              <p>A grape silver beet watercress potato.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/5.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Resonant</h2>
+              <p>Chickweed okra pea winter purslane.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+          <figure>
+            <img src="images/7.png" />
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+            <figcaption>
+              <h2>Zenith</h2>
+              <p>Salsify taro catsear garlic gram.</p>
+              <button>View</button>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+
+      </div><!--End Folio Container
+    </section> -->
+
+    <!-- Section 3 -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="text-center">
+            <h2> Hello.  I'm Geoff Pavey,
+              a Web Designer/Developer.<br>
+              <br>
+            </h2>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-left">
+                <div class="col-xs-12 text-center pb20"><i class="fa fa-laptop fa-3x "></i></div>
+                <h3>I specialize in web development and design. </h3>
+                <p> I speak MVC Javascript, jQuery, HTML5, CSS3, SQL, Ruby</p>
+                <p> I can work my way around many frameworks including Angular.js, Sass, Rails, Sinatra and Bootstrap.</p>
+                <p> I have worked with Postgresql, Mysql and Mongo.</p>
+                <p> I grok Git</p>
+                <p> The thought of using Restful Web Services make me giddy</p>
+                <p> I think build tools like Grunt, Bower and NPM are divine</p>
+                <p> I can make a bow tie out of a dollar bill.</p>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-left">
+            <div class="col-xs-12 text-center pb20"><i class="fa fa-rocket fa-3x" ></i></div>
+            <h3>They say that the journey is the destination and so far my life has led me on a great one.</h3>
+            <p>My insatiable lust to see the world has led me to over 27 countries. I love living out of a backpack.</p> <p>I've worked as a network administrator, a systems administrator, a bike mechanic, a carpenter, an international aid worker, a suit salesman, a shoe salesman, a sporting goods store manager and a bartender.</p> <p>And that's just the highlight reel.</p>
+            <br>
+          </div>
+          <div class="col-xs-12 col-sm-4"> <img src="images/me.jpg" alt="Me" class="img-rounded img-responsive" > </div>
+        </div>
+      </div>
+    </section>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-      <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+      <div id="scrollArea" >
+        <footer id="footer">
+          <section class="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-sm-4 text-center"> <i class="fa fa-caret-square-o-right "></i> Fishy Feet
+                  <hr>
+                  <div class="video-container" >
+                    <iframe  height="250" src="http://www.youtube.com/embed/lwI8Lc7rjNY" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <!--end col-->
+                <div class="col-xs-12 col-sm-4 text-center"> <i class="fa fa-twitter"></i> Random Tweet
+                  <hr>
+                  <div><a class="twitter-timeline" href="https://twitter.com/GeoffPavey" data-widget-id="410891384594264064">Tweets by @GeoffPavey</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+                  </div>
+                  <!--end col-->
+                  <div class="col-xs-12 col-sm-4 text-center" > <i class="fa fa-envelope-o"></i> Want to meet?
+                    <hr>
+                    <div class="contact-data">Contact info:<br/>
+                      <a href="mailto:geoff.pavey@gmail.com">geoff.pavey at gmail.com</a></div>
+                      <br />
+                      <br />
+                      <div id="social">
+                        <ul>
+                          <li><a href="http://linkedin.com/in/geoffpavey" target="_blank" alt="" title="linkedin"><img src="images/linkedin_white.png"></a></li>
+                          <li><a href="http://twitter.com/#!/geoffpavey" target="_blank" alt="@geoffpavey" title="@geoffpavey"><img src="images/twitter_white.png"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!--end col-->
+                  </div>
+                </div>
+                <hr>
+              </section>
 
-  ga('create', 'UA-46423440-1', 'auto');
+
+              <div id="copyright" class="row">
+                <div id="col-xs-12 text-center">
+                  <ul>
+                    <li>Web Development + Web Design  </li>
+                    <li> <img src="images/gp_small.png" width="25" height="30"> </li>
+                    <li> &copy; 2015 Geoff Pavey</li>
+                  </ul>
+                </div>
+              </div>
+        </footer>
+        <div id="bottom"></div>
+      </div>
+
+
+          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+          <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-46423440-1', 'auto');
   // ga('send', 'pageview');
 
-   </script>
+  </script>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+  <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- endbuild -->
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
+
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/jquery-waypoints/waypoints.js"></script>
-    <script src="bower_components/SHA-1/sha1.js"></script>
-    <script src="bower_components/angulartics/src/angulartics.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-adobe.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-chartbeat.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-flurry.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-ga-cordova.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-ga.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-gtm.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-kissmetrics.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-mixpanel.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-piwik.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-scroll.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-segmentio.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-splunk.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-woopra.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-marketo.js"></script>
-    <script src="bower_components/angulartics/src/angulartics-intercom.js"></script>
+
+    <script src="scripts/vendor/snap.svg-min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/controller.js"></script>
-        <script src="scripts/controllers/blog.js"></script>
-        <script src="scripts/controllers/post.js"></script>
-        <script src="scripts/services/blogservice.js"></script>
-        <script src="scripts/services/metadataservice.js"></script>
-        <script src="scripts/vendor/run-prettify.js"></script>
-        <script src="scripts/vendor/smooth-scroll.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/vendor/run-prettify.js"></script>
+
+    <!-- endbuild -->
+    <script>
+    (function() {
+
+      function init() {
+        var speed = 330,
+        easing = mina.backout;
+
+        [].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+          var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+          pathConfig = {
+            from : path.attr( 'd' ),
+            to : el.getAttribute( 'data-path-hover' )
+          };
+
+          el.addEventListener( 'mouseenter', function() {
+            path.animate( { 'path' : pathConfig.to }, speed, easing );
+          } );
+
+          el.addEventListener( 'mouseleave', function() {
+            path.animate( { 'path' : pathConfig.from }, speed, easing );
+          } );
+        } );
+      }
+
+      init();
+
+    })();
+    </script>
+  </body>
+  </html>

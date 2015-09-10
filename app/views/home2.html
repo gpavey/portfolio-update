@@ -39,51 +39,107 @@
       </div>
     </section>
 
-    <section id="work" >
+    <section id="work" class="demo">
       <div class="container">
+
         <div class="row">
           <div class="col-sm-12 text-center">
             <h1>PORTFOLIO</h1>
             <h2 class="subTitle">Latest fun projects I've been working on:</h2>
-            <a class="btn btn-default" ng-click="filters.category = ''">All</a>
-            <a class="btn btn-default" ng-click="filters.category = 'Web'">Web Sites</a>
-            <a class="btn btn-default" ng-click="filters.category = 'ill'">Illustrations</a>
-            <a class="btn btn-default" ng-click="filters.category = 'Ang'">Angular.js</a>
-            <a class="btn btn-default" ng-click="filters.category = 'Ruby'">Ruby</a>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <ul isotope-container="isotope-container">
-              <li class="animate-item" ng-repeat="project in projects | filter:filters">
-                <div class="col-xs-12 col-sm-6 col-md-4 col_adj">
-                  <div class="thumbnail">
-                    <div class="work-thumb">
+          <div id="grid" class="grid clearfix">
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/2.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Crystalline</h2>
+                  <p>Soko radicchio bunya nuts gram dulse.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/4.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Cacophony</h2>
+                  <p>Two greens tigernut soybean radish artichoke.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/6.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Languid</h2>
+                  <p>Beetroot water spinach okra water chestnut.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/8.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Serene</h2>
+                  <p>Water spinach arugula pea tatsoi.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/1.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Nebulous</h2>
+                  <p>Pea horseradish azuki bean lettuce.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="img/3.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Iridescent</h2>
+                  <p>A grape silver beet watercress potato.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/5.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Resonant</h2>
+                  <p>Chickweed okra pea winter purslane.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <img src="images/7.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Zenith</h2>
+                  <p>Salsify taro catsear garlic gram.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
 
-                      <div class="work-image">
-                        <a ui-sref="{{project.url}}">
-                          <img src="{{project.img}}" alt='' width='599' height='600' />
-                        </a>
-                      </div><!--work-image-->
-
-                      <div class="work-description">
-                        <div class="work-description-content">
-                          <h2 class="thumb-heading">
-                            <a ui-sref="{{project.url}}">{{project.name}}</a>
-                          </h2>
-                          <li ng-repeat="type in project.category">{{type}}
-                          </li>
-                        </div>
-                      </div>
-
-                    </div><!--work-thumb-->
-                  </div><!--thumbnail-->
-                </div>
-              </li>
-            </ul>
-          </div><!--end class col-sm-10-->
-        </div><!--End Row -->
       </div><!--End Folio Container-->
     </section>
 
