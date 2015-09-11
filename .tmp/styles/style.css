@@ -18,10 +18,11 @@ body {
 h1 h2 h3 h4 h5 h6 { font-family: 'Open Sans', sans-serif }
 ul { text-decoration: none }
     ul li { list-style-type: none }
-a:hover {
+/*a:hover {
   border-bottom: 1px #2A6496 solid;
   text-decoration: none;
-}
+}*/
+
 .h1{font-size: 3em;}
 .h2{font-size: 2em;}
 .h3{font-size: 1.5em;}
@@ -37,6 +38,7 @@ a:hover {
 .m20 {margin:20px;}
 .lh3 {line-height: 3em;}
 .lh2 {line-height: 2em;}
+.clear{clear: both;}
 .shadow1 {text-shadow: 1px 1px #474747;}
 .italic{font-style: italic;}
 .pad-section { padding: 50px 0 }
@@ -53,6 +55,19 @@ a:hover {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+}
+section {color:#fff;}
+section:nth-of-type(1) {
+  background-color: #2e5367 ;
+}
+section:nth-of-type(2) {
+  background-color: #267481;
+}
+section:nth-of-type(3) {
+  background-color: #fcb052;
+}
+section:nth-of-type(4) {
+  background-color: #f06a59;
 }
 #intro {
     color: #FFF;
@@ -75,13 +90,68 @@ a:hover {
 #about {
     padding: 75px 0;
     color: #fff;
-    background-color: #d83e40;
 }
 .media-object {
     width: 64px;
     height: 64px;
     padding-bottom: 30px;
 }
+
+/** Work
+ * ==================================================
+*/
+.work-items {
+  background: #fff url(../images/bg/fleck-white.gif) fixed center center repeat;
+  padding: 3.333em 0;
+  position: relative;
+}
+.work-items h2 {
+  color: #4c3d6d;
+  font-family: "futura-pt-condensed","Futura PT Condensed","Arial Narrow";
+  font-size: 3.5rem;
+  line-height: 1;
+  padding-top: 32px;
+  position: relative;
+  text-transform: uppercase;
+
+}
+.work-item {
+  padding-bottom: 5em;
+  position: relative;
+}
+.work-item:before, .work-item:after {
+  content: " ";
+  display: table;
+}
+.no-disk ul li{
+  list-style:none !important;
+}
+
+.work-items ul li, ol {
+  list-style: circle outside none;
+  margin: 1em 0;
+}
+.work-item.even .work-desc ul {
+  direction: rtl;
+  padding: 0 1.5em 0 0;
+}
+.work-item.even .work-desc {
+  float: right;
+  margin-left: 2.857142857%;
+  margin-right: 0;
+  text-align: right;
+  font-size: 1.4vw;
+}
+.work-desc {
+  float: right;
+  margin-right: 2.857142857%;
+  line-height: 1.333;
+  vertical-align: top;
+}
+.no-disk p {
+  font-size: 1.4vw;
+}
+
 /** Contact
  * ==================================================
  */
@@ -108,68 +178,7 @@ hr {
     background: #333;
 }
 
-/* Animate
-================================================== */
-.well[ui-view]{
- height: 65px;
-}
 
-.ui-view-container {
-  position: relative;
-}
-[ui-view].ng-enter, [ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  transition:all .5s ease-in-out;
-}
-
-[ui-view].ng-enter {
-  opacity: 0;
-  -webkit-transform:scale3d(0.5, 0.5, 0.5);
-  transform:scale3d(0.5, 0.5, 0.5);
-}
-
-[ui-view].ng-enter-active {
-  opacity: 1;
-  -webkit-transform:scale3d(1, 1, 1);
-  transform:scale3d(1, 1, 1);
-}
-
-[ui-view].ng-leave {
-  opacity: 1;
-  -webkit-transform:translate3d(0, 0, 0);
-  transform:translate3d(0, 0, 0);
-}
-
-[ui-view].ng-leave-active {
-  opacity: 0;
-  -webkit-transform:translate3d(100px, 0, 0);
-  transform:translate3d(100px, 0, 0);
-}
-
-.animate-item.ng-enter,
-.animate-item.ng-leave
-{
-    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    position: relative;
-    display: block;
-}
-
-.animate-item.ng-enter.animate-item.ng-enter-active,
-.animate-item,ng-leave {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  opacity: 1;
-}
-
-.animate-item.ng-leave.animate-item.ng-leave-active,
-.animate-item.ng-enter {
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  height: 0px;
-  opacity: 0;
-}
 
 /* portfolio
 ==================================================  */
@@ -189,98 +198,7 @@ nav#filter_btn li {
     border: none;
     padding: 1px;
 }
-#work {
-    padding: 50px 0;
-    background-color: #fff;
-    color: #000;
-}
-    #work h1 {
-        font-size: 3em;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-    }
-    #work h1::after {
-        content: " ";
-        border: solid 1px #232930;
-        display: block;
-        width: 1em;
-        margin: .6em auto auto auto;
-    }
-img.attachment-featured-image,
-#work-image a img { margin: 0 }
-.work_container {background-color: #fff;}
-.work_container ul {
-    padding: 10px;
-    text-align: center;
-}
-.work_background {
-    padding-top: 100px;
-    padding-bottom: 60px;
-    color: #000;
-    background-image: url(../images/work_bkgrnd.jpg);
-}
-.work_background h1 {margin-top: 0;}
-.work_bottom {
-    padding-top: 50px;
-    padding-bottom: 60px;
-    color: #000;
-    background-image: url(../images/work_bkgrnd.jpg);
-}
-    .work_bottom h5 { color: #f00 }
-.work-thumb {
-    position: relative;
-    margin: 0px;
-    background: #2E3433;
-}
-    .work-thumb .work-description {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -100px;
-        width:200px;
-        display: none;
-    }
-.work-image {
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    position: relative;
-    z-index: 2;
-}
-.work-image:hover { opacity: 0 }
-.work-description {
-    padding: 20px;
-    z-index: 1;
-    display: table;
-}
-    .work-description .work-description-content h2 {
-        font-size: 2.4em;
-        font-weight: 400;
-        color: #E1CDAA;
-        font-style: italic;
-        padding: .4em 0;
-    }
-    .work-description a { color: #E1CDAA }
-    .work-description li {
-        list-style-type: none;
-        color: #fff;
-        font-size: 1.5em;
-    }
-    .work-description h2::after {
-        content: " ";
-        border: solid 1px white;
-        display: block;
-        width: 1.2em;
-        margin: 0.8em auto 0.6em auto;
-    }
-.work-thumb:hover .work-description { display: block }
-.work-description-content {
-    display: table-cell;
-    vertical-align: middle;
-}
+
 /** Footer
  * ==================================================
  */
@@ -288,7 +206,6 @@ img.attachment-featured-image,
 footer {
     padding: 25px 0;
     color: #fff;
-    background-color: #144D50;
     font-family: inherit;
 }
 .video-container {
