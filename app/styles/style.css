@@ -22,6 +22,7 @@ ul { text-decoration: none }
   border-bottom: 1px #2A6496 solid;
   text-decoration: none;
 }*/
+
 .h1{font-size: 3em;}
 .h2{font-size: 2em;}
 .h3{font-size: 1.5em;}
@@ -37,6 +38,7 @@ ul { text-decoration: none }
 .m20 {margin:20px;}
 .lh3 {line-height: 3em;}
 .lh2 {line-height: 2em;}
+.clear{clear: both;}
 .shadow1 {text-shadow: 1px 1px #474747;}
 .italic{font-style: italic;}
 .pad-section { padding: 50px 0 }
@@ -53,6 +55,19 @@ ul { text-decoration: none }
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+}
+section {color:#fff;}
+section:nth-of-type(1) {
+  background-color: #2e5367 ;
+}
+section:nth-of-type(2) {
+  background-color: #267481;
+}
+section:nth-of-type(3) {
+  background-color: #fcb052;
+}
+section:nth-of-type(4) {
+  background-color: #f06a59;
 }
 #intro {
     color: #FFF;
@@ -78,13 +93,68 @@ ul { text-decoration: none }
 #about {
     padding: 75px 0;
     color: #fff;
-    background-color: #d83e40;
 }
 .media-object {
     width: 64px;
     height: 64px;
     padding-bottom: 30px;
 }
+
+/** Work
+ * ==================================================
+*/
+.work-items {
+  background: #fff url(../images/bg/fleck-white.gif) fixed center center repeat;
+  padding: 3.333em 0;
+  position: relative;
+}
+.work-items h2 {
+  color: #4c3d6d;
+  font-family: "futura-pt-condensed","Futura PT Condensed","Arial Narrow";
+  font-size: 3.5rem;
+  line-height: 1;
+  padding-top: 32px;
+  position: relative;
+  text-transform: uppercase;
+
+}
+.work-item {
+  padding-bottom: 5em;
+  position: relative;
+}
+.work-item:before, .work-item:after {
+  content: " ";
+  display: table;
+}
+.no-disk ul li{
+  list-style:none !important;
+}
+
+.work-items ul li, ol {
+  list-style: circle outside none;
+  margin: 1em 0;
+}
+.work-item.even .work-desc ul {
+  direction: rtl;
+  padding: 0 1.5em 0 0;
+}
+.work-item.even .work-desc {
+  float: right;
+  margin-left: 2.857142857%;
+  margin-right: 0;
+  text-align: right;
+  font-size: 1.4vw;
+}
+.work-desc {
+  float: right;
+  margin-right: 2.857142857%;
+  line-height: 1.333;
+  vertical-align: top;
+}
+.no-disk p {
+  font-size: 1.4vw;
+}
+
 /** Contact
  * ==================================================
  */
@@ -136,10 +206,6 @@ nav#filter_btn li {
     padding: 1px;
 }
 
-#portfolio {
-  background-color: #e74c3c;
-}
-
 /** Footer
  * ==================================================
  */
@@ -147,7 +213,6 @@ nav#filter_btn li {
 footer {
     padding: 25px 0;
     color: #fff;
-    background-color: #144D50;
     font-family: inherit;
 }
 .video-container {
